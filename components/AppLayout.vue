@@ -4,6 +4,7 @@
     <AppLoadingBar />
     <AppNavbar />
     <slot />
+    <AppFooter />
   </div>
 </template>
 
