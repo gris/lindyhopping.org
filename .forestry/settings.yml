@@ -3,7 +3,12 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
+- type: document
+  path: content/events
+  label: events
+  match: "**/*"
+  read_only: false
 upload_dir: public
 public_path: ''
 front_matter_path: ''
