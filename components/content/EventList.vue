@@ -3,7 +3,7 @@
     <ContentList v-slot="{ list }" path="/events">
       <div v-for="event in list" :key="event._path" class="py-5">
         <div class="rounded overflow-hidden shadow-lg border-solid border-2 border-current">
-          <nuxt-img :src="event.image" class="w-full" alt="Swing Jazz Event" />
+          <img :src="event.image" class="w-full" alt="Swing Jazz Event">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">
               <h2 class="my-px py-px">
