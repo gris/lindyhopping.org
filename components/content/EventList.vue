@@ -14,7 +14,6 @@
               </p>
             </div>
             <p>{{ event.description }}</p>
-
             <p><Icon name="noto:backhand-index-pointing-right" class=".text-indigo-400 .w-5 .h-5" /> Endereço: {{ event.address }}</p>
             <p><Icon name="fluent-emoji:money-bag" class=".text-indigo-400 .w-5 .h-5" /> Entrada: {{ event.price }}</p>
           </div>
