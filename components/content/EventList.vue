@@ -9,7 +9,7 @@
               <h2 class="my-px py-px">
                 {{ event.name }}
               </h2>
-              <p class="inline-block bg-indigo-400 text-gray-700 rounded-full px-3 py-1 text-sm mr-2 mb-2">
+              <p class="inline-block bg-inherit text-indigo-400 border-solid border-2 border-indigo-400 rounded-full px-3 py-1 text-sm mr-2 mb-2">
                 {{ event.date }}
               </p>
             </div>
