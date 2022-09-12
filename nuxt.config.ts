@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxt/image-edge'
   ],
-
   // https://color-mode.nuxtjs.org
   colorMode: {
     classSuffix: ''
