@@ -1,6 +1,5 @@
 export default defineAppConfig({
   socials: {
-    twitter: 'Atinux',
-    github: 'Atinux/content-wind'
+    github: 'gris/swingdance.io'
   }
 })
