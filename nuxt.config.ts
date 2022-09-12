@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
     'nuxt-icon',
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    'vue-plausible'
   ],
   // https://color-mode.nuxtjs.org
   colorMode: {
@@ -20,5 +21,8 @@ export default defineNuxtConfig({
       // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
       theme: 'dracula'
     }
+  },
+  plausible: {
+    domain: 'lindyhopping.org'
   }
 })
