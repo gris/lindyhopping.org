@@ -1,9 +1,0 @@
----
-label: event
-hide_body: true
-fields:
-- name: price
-  type: text
-  config:
-    required: false
-  label: price
