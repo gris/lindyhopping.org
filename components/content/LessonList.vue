@@ -13,6 +13,7 @@
                 {{ lesson.date }}
               </p>
             </div>
+            <p><Icon name="noto:woman-dancing-light-skin-tone" class=".text-indigo-400 .w-5 .h-5" /> Professora: {{ lesson.teacher }}</p>
             <p>{{ lesson.description }}</p>
             <p><Icon name="noto:backhand-index-pointing-right" class=".text-indigo-400 .w-5 .h-5" /> Endereço: {{ lesson.address }}</p>
             <p><Icon name="fluent-emoji:money-bag" class=".text-indigo-400 .w-5 .h-5" /> {{ lesson.price }}</p>
