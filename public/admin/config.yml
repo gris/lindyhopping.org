@@ -6,16 +6,18 @@ media_folder: public/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+  - name: 'dances'
+    label: 'Dances'
+    folder: 'content/dances'
+    format: 'json'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Name', name: 'name', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Address', name: 'address', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'string' }
+      - { label: 'Price', name: 'price', widget: 'string' }
