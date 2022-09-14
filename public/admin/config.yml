@@ -37,6 +37,6 @@ collections:
       - { label: 'Date', name: 'date', widget: 'string' }
       - { label: 'Price', name: 'price', widget: 'string' }
       - { label: 'Teacher', name: 'teacher', widget: 'string' }
-      - { label: 'Playlist', name: 'playlist', widget: 'string' }
+      - { label: 'Playlist', name: 'playlist', widget: 'string', required: false }
 
 
