@@ -1,3 +1,11 @@
+<script setup lang="ts">
+useHead({
+  script: [
+    { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+  ]
+})
+</script>
+
 <template>
   <div class="sm:pt-6 sm:pb-10">
     <Html lang="pt-br" />
