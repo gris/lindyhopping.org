@@ -6,7 +6,7 @@ const localeStringOptions = computed(() => ({ weekday: 'short', month: '2-digit'
   <main>
     <ContentList v-slot="{ list }" path="/dances">
       <div v-for="dance in list" :key="dance._path" class="py-5">
-        <div v-if="new Date(dance.startDatetime) < new Date()" class="rounded overflow-hidden shadow-lg border-solid border-2 border-current">
+        <div v-if="(new Date(dance.startDatetime)).getTime() > (new Date()).getTime()" class="rounded overflow-hidden shadow-lg border-solid border-2 border-current">
           <img :src="dance.image" class="w-full" alt="Swing Jazz Event">
           <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">
@@ -14,7 +14,7 @@ const localeStringOptions = computed(() => ({ weekday: 'short', month: '2-digit'
                 {{ dance.name }}
               </h2>
               <p class="inline-block bg-inherit text-indigo-500 border-solid border-2 border-indigo-500 rounded-full px-3 py-1 text-sm mr-2 mb-2">
-                {{ dance.startDatetime.toLocaleString("pt-BR", localeStringOptions) }}
+                {{ new Date(dance.startDatetime).toLocaleString("pt-BR", localeStringOptions) }}
               </p>
             </div>
             <p>{{ dance.description }}</p>
