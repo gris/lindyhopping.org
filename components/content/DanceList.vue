@@ -16,7 +16,7 @@
             <p>{{ dance.description }}</p>
             <div v-if="dance.playlist">
               <p>
-                Playlist da aula: <NuxtLink
+                Playlist do baile: <NuxtLink
                   :key="dance.playlist"
                   :to="dance.playlist"
                 >
