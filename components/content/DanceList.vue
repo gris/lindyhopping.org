@@ -14,6 +14,18 @@
               </p>
             </div>
             <p>{{ dance.description }}</p>
+            <div v-if="dance.playlist">
+              <p>
+                Playlist da aula: <NuxtLink
+                  :key="dance.playlist"
+                  :to="dance.playlist"
+                >
+                  <Icon
+                    name="logos:spotify-icon"
+                  />
+                </NuxtLink>
+              </p>
+            </div>
             <p><Icon name="noto:backhand-index-pointing-right" class=".text-indigo-400 .w-5 .h-5" /> Endereço: {{ dance.address }}</p>
             <p><Icon name="fluent-emoji:money-bag" class=".text-indigo-400 .w-5 .h-5" /> {{ dance.price }}</p>
           </div>
