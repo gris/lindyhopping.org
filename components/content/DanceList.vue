@@ -4,10 +4,15 @@ const localeStringOptions = computed(() => ({ weekday: 'short', month: '2-digit'
 const dances = await queryContent('dances').find()
 const shouldShowPastDances = ref(false)
 
-const dancesToCome = computed(() => dances.filter(dance => shouldShowPastDances.value ? (new Date(dance.startDatetime)).getTime() < (new Date()).getTime() : (new Date(dance.startDatetime)).getTime() > (new Date()).getTime()))
+const dancesToShow = computed(() => dances.filter(dance => shouldShowPastDances.value ? (new Date(dance.startDatetime)).getTime() < (new Date()).getTime() : (new Date(dance.startDatetime)).getTime() > (new Date()).getTime()))
 
 function toggleShouldShowPastDances () {
   shouldShowPastDances.value = !shouldShowPastDances.value
+  if (shouldShowPastDances.value) {
+    dancesToShow.value.sort((a, b) => (new Date(b.startDatetime)).getTime() - (new Date(a.startDatetime)).getTime())
+  } else {
+    dancesToShow.value.sort((a, b) => (new Date(a.startDatetime)).getTime() - (new Date(b.startDatetime)).getTime())
+  }
 }
 
 </script>
@@ -17,7 +22,7 @@ function toggleShouldShowPastDances () {
     <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded" @click="toggleShouldShowPastDances">
       {{ shouldShowPastDances ? 'Próximos Bailes' : 'Bailes Passados' }}
     </button>
-    <div v-for="dance in dancesToCome" :key="dance._path" class="py-5">
+    <div v-for="dance in dancesToShow" :key="dance._path" class="py-5">
       <div class="rounded overflow-hidden shadow-lg border-solid border-2 border-current">
         <img :src="dance.image" class="w-full" alt="Swing Jazz Event">
         <div class="px-6 py-4">
