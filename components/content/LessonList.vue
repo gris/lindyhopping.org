@@ -5,6 +5,7 @@ const lessons = await queryContent('lessons').find()
 const shouldShowPastLessons = ref(false)
 
 const lessonsToShow = computed(() => lessons.filter(lesson => shouldShowPastLessons.value ? (new Date(lesson.startDatetime)).getTime() < (new Date()).getTime() : (new Date(lesson.startDatetime)).getTime() > (new Date()).getTime()))
+lessonsToShow.value.sort((a, b) => (new Date(a.startDatetime)).getTime() - (new Date(b.startDatetime)).getTime())
 
 function toggleShouldShowPastLessons () {
   shouldShowPastLessons.value = !shouldShowPastLessons.value

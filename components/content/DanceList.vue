@@ -5,6 +5,7 @@ const dances = await queryContent('dances').find()
 const shouldShowPastDances = ref(false)
 
 const dancesToShow = computed(() => dances.filter(dance => shouldShowPastDances.value ? (new Date(dance.startDatetime)).getTime() < (new Date()).getTime() : (new Date(dance.startDatetime)).getTime() > (new Date()).getTime()))
+dancesToShow.value.sort((a, b) => (new Date(a.startDatetime)).getTime() - (new Date(b.startDatetime)).getTime())
 
 function toggleShouldShowPastDances () {
   shouldShowPastDances.value = !shouldShowPastDances.value
