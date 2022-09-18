@@ -33,9 +33,6 @@ function toggleShouldShowPastLessons () {
             <p class="inline-block bg-inherit text-indigo-500 border-solid border-2 border-indigo-500 rounded-full px-3 py-1 text-sm mr-2 mb-2">
               {{ new Date(lesson.startDatetime).toLocaleString("pt-BR", localeStringOptions) }}
             </p>
-            <p class="inline-block bg-inherit text-indigo-500 border-solid border-2 border-indigo-500 rounded-full px-3 py-1 text-sm mr-2 mb-2">
-              {{ lesson.date }}
-            </p>
           </div>
           <p><Icon name="noto:woman-dancing-light-skin-tone" class=".text-indigo-400 .w-5 .h-5" /> Professora: {{ lesson.teacher }}</p>
           <p>{{ lesson.description }}</p>
