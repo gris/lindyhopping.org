@@ -19,7 +19,6 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Image', name: 'image', widget: 'image' }
       - { label: 'Address', name: 'address', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'string' }
       - { label: 'Price', name: 'price', widget: 'string' }
       - { label: 'Playlist', name: 'playlist', widget: 'string', required: false }
       - { label: 'Start Datetime', name: 'startDatetime', widget: 'datetime', required: false, date_format: "dddd, DD/MM", time_format: 'HH:mm' }
@@ -41,3 +40,5 @@ collections:
       - { label: 'Price', name: 'price', widget: 'string' }
       - { label: 'Teacher', name: 'teacher', widget: 'string' }
       - { label: 'Playlist', name: 'playlist', widget: 'string', required: false }
+      - { label: 'Start Datetime', name: 'startDatetime', widget: 'datetime', required: false, date_format: "dddd, DD/MM", time_format: 'HH:mm' }
+
