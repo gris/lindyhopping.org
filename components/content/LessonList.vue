@@ -35,7 +35,7 @@ function toggleShouldShowPastLessons () {
               {{ new Date(lesson.startDatetime).toLocaleString("pt-BR", localeStringOptions) }}
             </p>
           </div>
-          <p><Icon name="noto:woman-dancing-light-skin-tone" class=".text-indigo-400 .w-5 .h-5" /> Professora: {{ lesson.teacher }}</p>
+          <p>{{ lesson.teacher }}</p>
           <p>{{ lesson.description }}</p>
           <div v-if="lesson.playlist">
             <p>
