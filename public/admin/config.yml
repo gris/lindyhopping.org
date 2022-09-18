@@ -11,7 +11,7 @@ collections:
     folder: 'content/dances'
     format: 'json'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}'
     editor:
       preview: false
     fields:
@@ -28,7 +28,7 @@ collections:
     folder: 'content/lessons'
     format: 'json'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}'
     editor:
       preview: false
     fields:
