@@ -9,7 +9,7 @@ useHead({
 <template>
   <div class="sm:pt-6 sm:pb-10">
     <Html lang="pt-br" />
-    <Meta property="og:image" content="/lindy-hop-couple.png" />
+    <Meta property="og:image" content="/img/lindy-hop-couple.png" />
     <AppLoadingBar />
     <AppNavbar />
     <slot />
